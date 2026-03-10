@@ -1,15 +1,12 @@
 #CIFRADO CESAR
-#HAREMOS UN CIFRADO CESAR PARA LA PALABRA "INTER DE PORTO ALEGRE DESCENSO"
+#HAREMOS UN CIFRADO CESAR PARA LA PALABRA "INTER DE PORTO ALEGRE"
 #LA CONSOLA NOS TIENE QUE PEDIR QUE DESPLAZAMIENTO QUEREMOS DESPUES DE PEDIRNOS LA PALABRA
-
 print("=== CIFRADOR DE MENSAJES ===")
-
 mensaje = input("mensaje: ").upper()
 try:
     n = int(input("desplazamiento (1 al 25): "))
 except:
     print("Error: El desplazamiento debe ser un número."); exit()
-
 #CIFRADO
 cifrado = ""
 for car in mensaje:
@@ -20,7 +17,6 @@ for car in mensaje:
         cifrado += chr(nuevo_cod)
     else:
         cifrado += car
-
 #DESCIFRADO
 descifrado = ""
 for car in cifrado:
@@ -31,7 +27,6 @@ for car in cifrado:
         descifrado += chr(nuevo_cod)
     else:
         descifrado += car
-
 # IMPRESION
 print(f"\n[+] cifrado:   {cifrado}")
 print(f"[+] verificación: {descifrado}")
